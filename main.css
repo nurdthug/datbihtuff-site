@@ -420,16 +420,14 @@ a {
   }
 
   .hero-inner {
+    align-items: flex-start;
+    display: block;
     gap: 34px;
     padding-top: 28px;
   }
 
   .hero-preview {
-    margin: 0 auto;
-    max-width: 560px;
-    opacity: 1;
-    position: static;
-    width: 100%;
+    display: none;
   }
 
   .section-head {
@@ -449,7 +447,7 @@ a {
   }
 
   .hero-title {
-    font-size: clamp(58px, 18vw, 92px);
+    font-size: clamp(42px, 13.5vw, 62px);
   }
 
   .hero-sub {
