@@ -1,6 +1,6 @@
 # DATBIHTUFF Landing Site
 
-Static GitHub Pages landing page for the first DATBIHTUFF drop by OPIN Global.
+Static GitHub Pages landing page for the first DATBIHTUFF drop.
 
 No frameworks, no build step, no paid services required.
 
@@ -42,7 +42,7 @@ Root domain A records:
 WWW record:
 
 ```text
-www  CNAME  <the GitHub Pages username or OPIN Global organization domain shown by GitHub>
+www  CNAME  <the GitHub Pages username or organization domain shown by GitHub>
 ```
 
 Shop subdomain:
@@ -55,13 +55,9 @@ Do not point `shop.datbihtuff.com` until Printify gives the required DNS instruc
 
 ## Email Capture
 
-The form is visually ready and currently points to:
+The form is currently visual only and does not collect emails.
 
-```text
-https://formspree.io/f/YOUR_FORM_ID
-```
-
-Create a free Formspree, ConvertKit, Beehiiv, Mailchimp, or Google Forms endpoint and replace `YOUR_FORM_ID`.
+Connect a free Formspree, ConvertKit, Beehiiv, Mailchimp, or Google Forms endpoint before collecting addresses.
 
 ## Printify Pop-Up Store Plan
 
@@ -83,12 +79,9 @@ Pricing:
 - Premium tee: `$39.99` to `$44.99`
 - Hoodie later: `$64.99` to `$74.99`
 
-Shirt colors:
+Shirt color:
 
-- Black
 - White
-- Royal blue
-- Cream or ivory if available
 
 ## Product Descriptions
 
@@ -144,7 +137,7 @@ DATBIHTUFF.
 
 ```text
 fictional flavor. real shirt.
-DATBIHTUFF by OPIN Global.
+DATBIHTUFF.
 ```
 
 ## Launch Checklist
