@@ -97,6 +97,31 @@ a {
   position: absolute;
 }
 
+.site-art {
+  filter: saturate(1.08) contrast(1.08);
+  opacity: 0.14;
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
+  z-index: 0;
+}
+
+.site-art-gah {
+  bottom: -210px;
+  left: -170px;
+  max-width: none;
+  transform: rotate(-9deg);
+  width: clamp(360px, 42vw, 640px);
+}
+
+.site-art-tuff {
+  max-width: none;
+  right: -190px;
+  top: 70px;
+  transform: rotate(8deg);
+  width: clamp(390px, 46vw, 700px);
+}
+
 .hero-inner {
   align-items: center;
   display: flex;
@@ -315,8 +340,40 @@ a {
     var(--panel-2);
   border-bottom: 3px solid var(--blue);
   border-top: 3px solid var(--red);
+  overflow: hidden;
   padding: 70px 20px;
+  position: relative;
   text-align: center;
+}
+
+.drop::after {
+  background: rgba(8, 8, 8, 0.54);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.drop-art {
+  filter: saturate(1.05) contrast(1.05);
+  max-width: none;
+  opacity: 0.16;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  user-select: none;
+  width: clamp(310px, 30vw, 470px);
+  z-index: 0;
+}
+
+.drop-art-gah {
+  left: -130px;
+  transform: translateY(-50%) rotate(-11deg);
+}
+
+.drop-art-tuff {
+  right: -140px;
+  transform: translateY(-50%) rotate(11deg);
 }
 
 .drop-head {
@@ -325,7 +382,9 @@ a {
   line-height: 0.96;
   margin: 0 auto 18px;
   max-width: 980px;
+  position: relative;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .drop-copy {
@@ -334,6 +393,8 @@ a {
   font-weight: 800;
   margin: 0 auto;
   max-width: 650px;
+  position: relative;
+  z-index: 1;
 }
 
 .join {
@@ -428,6 +489,23 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .site-art {
+    opacity: 0.075;
+  }
+
+  .site-art-gah {
+    bottom: -120px;
+    left: auto;
+    right: -120px;
+    transform: rotate(8deg);
+    width: 430px;
+  }
+
+  .site-art-tuff,
+  .drop-art {
+    display: none;
+  }
+
   .hero-inner {
     align-items: flex-start;
     display: block;
@@ -456,11 +534,24 @@ a {
   }
 
   .hero-title {
-    font-size: clamp(42px, 13.5vw, 62px);
+    font-size: clamp(38px, 12.5vw, 54px);
   }
 
   .hero-sub {
+    font-size: 17px;
     margin: 22px 0 28px;
+  }
+
+  .hero-cta {
+    display: grid;
+  }
+
+  .products {
+    padding: 52px 14px;
+  }
+
+  .card {
+    padding: 14px;
   }
 
   .hero-preview {
@@ -479,6 +570,22 @@ a {
 
   .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .drop {
+    padding: 54px 16px;
+  }
+
+  .drop-head {
+    font-size: clamp(30px, 11vw, 46px);
+  }
+
+  .drop-copy {
+    font-size: 17px;
+  }
+
+  .join {
+    padding: 54px 16px;
   }
 
   .join-form {
