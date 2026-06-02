@@ -424,6 +424,7 @@ a {
 
 .join-form {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -442,6 +443,23 @@ a {
 .join-input:focus {
   border-color: var(--blue-hot);
   outline: none;
+}
+
+.join-status {
+  color: var(--cream);
+  flex-basis: 100%;
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0;
+  min-height: 20px;
+  text-transform: uppercase;
+}
+
+.hidden-frame {
+  border: 0;
+  height: 0;
+  position: absolute;
+  width: 0;
 }
 
 .btn:disabled,
