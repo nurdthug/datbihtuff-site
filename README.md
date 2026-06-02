@@ -55,9 +55,9 @@ Do not point `shop.datbihtuff.com` until Printify gives the required DNS instruc
 
 ## Email Capture
 
-The form is currently visual only and does not collect emails.
+The site form submits to the published `DATBIHTUFF Drop List` Google Form.
 
-Connect a free Formspree, ConvertKit, Beehiiv, Mailchimp, or Google Forms endpoint before collecting addresses.
+Submissions are collected in the Google Form's Responses tab and can be exported to Google Sheets.
 
 ## Printify Pop-Up Store Plan
 
