@@ -15,7 +15,7 @@
   <meta name="twitter:description" content="Two designs. Zero explanation. Maximum flavor." />
   <meta name="twitter:image" content="https://datbihtuff.com/assets/datbihtuff.png" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23080808'/><text x='50' y='68' font-size='60' text-anchor='middle' fill='%23116dff' font-family='Arial' font-weight='bold'>D</text></svg>" />
-  <link rel="stylesheet" href="main.css?v=bgart1" />
+  <link rel="stylesheet" href="main.css?v=form1" />
 </head>
 <body>
   <header class="hero">
@@ -98,12 +98,20 @@
       <div>
         <p class="eyebrow">Drop alerts</p>
         <h2 class="join-head">Join the list</h2>
-        <p class="join-sub">Email collection is not connected yet.</p>
+        <p class="join-sub">Get first notice when the drop moves.</p>
       </div>
-      <div class="join-form" aria-label="Drop list coming soon">
-        <input class="join-input" type="email" name="email" placeholder="list opens soon" disabled />
-        <button class="btn btn-primary" type="button" disabled>List opens soon</button>
-      </div>
+      <form
+        class="join-form"
+        id="drop-list-form"
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSctW36r9slaSCMEqv45i_k9s_S_jF9h9ztHGNeBp8S0sUx8Rw/formResponse"
+        method="POST"
+        target="drop-list-frame"
+      >
+        <input class="join-input" type="email" name="entry.1398987527" placeholder="you@email.com" required />
+        <button class="btn btn-primary" type="submit">Join the list</button>
+        <p class="join-status" id="drop-list-status" aria-live="polite"></p>
+      </form>
+      <iframe class="hidden-frame" name="drop-list-frame" title="Drop list submission"></iframe>
     </section>
   </main>
 
@@ -113,5 +121,26 @@
     <p class="footer-link">datbihtuff.com</p>
     <p class="footer-note">First drop coming online</p>
   </footer>
+  <script>
+    const dropListForm = document.getElementById("drop-list-form");
+    const dropListStatus = document.getElementById("drop-list-status");
+
+    if (dropListForm && dropListStatus) {
+      dropListForm.addEventListener("submit", () => {
+        const button = dropListForm.querySelector("button");
+        if (button) {
+          button.textContent = "Joining...";
+          button.disabled = true;
+        }
+        window.setTimeout(() => {
+          dropListStatus.textContent = "You're on the list.";
+          dropListForm.reset();
+          if (button) {
+            button.textContent = "Joined";
+          }
+        }, 900);
+      });
+    }
+  </script>
 </body>
 </html>
