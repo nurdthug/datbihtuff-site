@@ -184,15 +184,15 @@ a {
 
 .hero-preview {
   display: grid;
-  gap: 16px;
+  gap: 12px;
   grid-template-columns: 1fr 1fr;
-  max-width: 430px;
-  opacity: 0.34;
+  max-width: 470px;
+  opacity: 0.58;
   position: absolute;
   right: 20px;
-  top: 170px;
+  top: 152px;
   transform: rotate(-2deg);
-  width: 36vw;
+  width: 38vw;
   z-index: 1;
 }
 
@@ -203,7 +203,7 @@ a {
   box-shadow: 10px 10px 0 var(--red);
   color: var(--bg);
   min-width: 0;
-  padding: 14px;
+  padding: 10px;
 }
 
 .preview-card-b {
@@ -222,9 +222,10 @@ a {
 .preview-card span {
   display: block;
   font-family: "Arial Black", Impact, Arial, sans-serif;
-  font-size: clamp(18px, 3vw, 34px);
+  font-size: clamp(13px, 1.6vw, 20px);
   line-height: 1;
-  margin-top: 12px;
+  margin-top: 8px;
+  overflow-wrap: anywhere;
   text-align: center;
 }
 
@@ -279,7 +280,7 @@ a {
 }
 
 .card-img {
-  background: var(--cream);
+  background: #ffffff;
   border-radius: 6px;
   display: grid;
   margin-bottom: 18px;
@@ -289,7 +290,7 @@ a {
 
 .card-img img {
   aspect-ratio: 4 / 5;
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
 }
 
